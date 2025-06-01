@@ -11,7 +11,7 @@ const Celebration = ({ isVisible }: CelebrationProps) => {
   useEffect(() => {
     if (isVisible) {
       // Create confetti particles
-      const particles = Array.from({ length: 50 }, (_, i) => ({
+      const particles = Array.from({ length: 120 }, (_, i) => ({
         id: i,
         x: Math.random() * 100,
         y: -10,

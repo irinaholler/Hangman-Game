@@ -4,14 +4,12 @@ interface StatisticsProps {
   streak: number;
   totalWins: number;
   totalGames: number;
-  bestStreak: number;
 }
 
 const Statistics = ({
   streak,
   totalWins,
   totalGames,
-  bestStreak,
 }: StatisticsProps) => {
   const winRate =
     totalGames > 0 ? Math.round((totalWins / totalGames) * 100) : 0;
@@ -32,8 +30,8 @@ const Statistics = ({
           </span>
         </div>
         <div className={styles.statItem}>
-          <span className={styles.statLabel}>Best Streak</span>
-          <span className={styles.statValue}>{bestStreak}</span>
+          <span className={styles.statLabel}>Total Games</span>
+          <span className={styles.statValue}>{totalGames}</span>
         </div>
         <div className={styles.statItem}>
           <span className={styles.statLabel}>Total Wins</span>
