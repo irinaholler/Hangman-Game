@@ -1,0 +1,224 @@
+.hangman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  grid-area: hangman;
+}
+
+.figure {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.pole {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 8px;
+  height: 260px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.beam {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 180px;
+  height: 8px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.rope {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 40px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.head {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 8px solid;
+  border-image: linear-gradient(45deg, #6366f1, #8b5cf6) 1;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.body {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  width: 8px;
+  height: 90px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.leftArm,
+.rightArm {
+  position: absolute;
+  top: 100px;
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.leftArm {
+  left: calc(50% - 25px);
+  transform: rotate(45deg);
+}
+
+.rightArm {
+  left: calc(50% + 17px);
+  transform: rotate(-45deg);
+}
+
+.leftLeg,
+.rightLeg {
+  position: absolute;
+  top: 180px;
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.leftLeg {
+  left: calc(50% - 20px);
+  transform: rotate(45deg);
+}
+
+.rightLeg {
+  left: calc(50% + 12px);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .figure {
+    width: 200px;
+    height: 200px;
+  }
+
+  .base {
+    width: 120px;
+    height: 10px;
+  }
+
+  .pole {
+    width: 10px;
+    height: 180px;
+  }
+
+  .beam {
+    width: 120px;
+    height: 10px;
+  }
+
+  .rope {
+    width: 4px;
+    height: 30px;
+  }
+
+  .head {
+    width: 40px;
+    height: 40px;
+  }
+
+  .body {
+    width: 8px;
+    height: 60px;
+  }
+
+  .leftArm, .rightArm {
+    width: 40px;
+    height: 8px;
+  }
+
+  .leftLeg, .rightLeg {
+    width: 8px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .figure {
+    width: 150px;
+    height: 150px;
+  }
+
+  .base {
+    width: 90px;
+    height: 8px;
+  }
+
+  .pole {
+    width: 8px;
+    height: 135px;
+  }
+
+  .beam {
+    width: 90px;
+    height: 8px;
+  }
+
+  .rope {
+    width: 3px;
+    height: 25px;
+  }
+
+  .head {
+    width: 30px;
+    height: 30px;
+  }
+
+  .body {
+    width: 6px;
+    height: 45px;
+  }
+
+  .leftArm, .rightArm {
+    width: 30px;
+    height: 6px;
+  }
+
+  .leftLeg, .rightLeg {
+    width: 6px;
+    height: 30px;
+  }
+}
