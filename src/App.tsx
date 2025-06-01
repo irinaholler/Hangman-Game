@@ -127,6 +127,7 @@ function App() {
 
   return (
     <div className={styles.app}>
+      <h1 className={styles.title}>Hangman</h1>
       <div className={styles.gameContainer}>
         <div className={styles.leftPanel}>
           <Statistics
@@ -146,7 +147,6 @@ function App() {
           )}
         </div>
         <div className={styles.mainContent}>
-          <h1 className={styles.title}>Hangman</h1>
           <div className={styles.status}>
             {gameState.status === "won" && (
               <div className={styles.message}>
@@ -175,12 +175,10 @@ function App() {
           )}
         </div>
       </div>
-      <div className={`${styles.infoPopup} ${showInfo ? styles.visible : ""}`}>
+      <div className={`${styles.infoPopup} ${!showInfo ? styles.hidden : ''}`}>
+        <button className={styles.closeButton} onClick={() => setShowInfo(false)} aria-label="Close info popup">&times;</button>
         <h3>Game Information</h3>
-        <p>
-          This game features IT-related words. Try to guess the programming
-          terms, technologies, and computer science concepts!
-        </p>
+        <p>This game features IT-related words. Try to guess the programming terms, technologies, and computer science concepts!</p>
       </div>
       {gameState.status === "won" && <Celebration isVisible={true} />}
       {showStreakCelebration && streak >= 3 && (
