@@ -8,6 +8,7 @@ import Celebration from './components/Celebration';
 import StreakCelebration from './components/StreakCelebration';
 import Statistics from './components/Statistics';
 import styles from './App.module.css';
+import { HashRouter } from "react-router-dom";
 
 const MAX_ATTEMPTS = 6;
 
