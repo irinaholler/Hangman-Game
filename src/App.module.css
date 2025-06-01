@@ -605,12 +605,12 @@
   }
   .word {
     gap: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .letter {
     width: 24px;
     height: 24px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     border-radius: 6px;
   }
   .infoPopup {
@@ -646,12 +646,12 @@
   }
   .word {
     gap: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .letter {
     width: 18px;
     height: 18px;
-    font-size: 0.7rem;
+    font-size: 1rem;
     border-radius: 4px;
   }
   .newGameButton {
