@@ -90,7 +90,7 @@
 .leftArm,
 .rightArm {
   position: absolute;
-  top: 100px;
+  top: 140px;
   width: 8px;
   height: 50px;
   background: linear-gradient(180deg, #6366f1, #8b5cf6);
@@ -100,12 +100,14 @@
 
 .leftArm {
   left: calc(50% - 25px);
-  transform: rotate(45deg);
+  top: 140px;
+  transform: rotate(25deg);
 }
 
 .rightArm {
   left: calc(50% + 17px);
-  transform: rotate(-45deg);
+  top: 140px;
+  transform: rotate(-25deg);
 }
 
 .leftLeg,
@@ -131,78 +133,108 @@
 
 @media (max-width: 768px) {
   .figure {
+    width: 180px;
+    height: 180px;
+  }
+  .base {
+    width: 110px;
+    height: 8px;
+  }
+  .pole {
+    width: 8px;
+    height: 160px;
+  }
+  .beam {
+    width: 110px;
+    height: 8px;
+  }
+  .rope {
+    width: 4px;
+    height: 28px;
+  }
+  .head {
+    width: 36px;
+    height: 36px;
+    border-width: 7px;
+    top: 28px;
+  }
+  .body {
+    width: 8px;
+    height: 60px;
+    top: 64px;
+  }
+  .leftArm, .rightArm {
+    width: 36px;
+    height: 8px;
+    top: 90px;
+  }
+  .leftLeg, .rightLeg {
+    width: 8px;
+    height: 36px;
+    top: 130px;
+  }
+  .leftArm {
+    left: calc(50% - 32px);
+    transform: rotate(25deg);
+  }
+  .rightArm {
+    left: calc(50% + 12px);
+    transform: rotate(-25deg);
+  }
+  .leftLeg { left: calc(50% - 16px); }
+  .rightLeg { left: calc(50% + 8px); }
+}
+
+@media (max-width: 480px) {
+  .figure {
     width: 120px;
     height: 120px;
   }
   .base {
     width: 70px;
-    height: 7px;
+    height: 5px;
   }
   .pole {
-    width: 7px;
-    height: 110px;
+    width: 5px;
+    height: 100px;
   }
   .beam {
     width: 70px;
-    height: 7px;
-  }
-  .rope {
-    width: 3px;
-    height: 18px;
-  }
-  .head {
-    width: 22px;
-    height: 22px;
-  }
-  .body {
-    width: 5px;
-    height: 35px;
-  }
-  .leftArm, .rightArm {
-    width: 22px;
     height: 5px;
   }
-  .leftLeg, .rightLeg {
-    width: 5px;
-    height: 22px;
-  }
-}
-
-@media (max-width: 480px) {
-  .figure {
-    width: 80px;
-    height: 80px;
-  }
-  .base {
-    width: 45px;
-    height: 4px;
-  }
-  .pole {
-    width: 4px;
-    height: 65px;
-  }
-  .beam {
-    width: 45px;
-    height: 4px;
-  }
   .rope {
-    width: 2px;
-    height: 10px;
+    width: 2.5px;
+    height: 16px;
   }
   .head {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
+    border-width: 4px;
+    top: 18px;
   }
   .body {
-    width: 3px;
-    height: 18px;
+    width: 4px;
+    height: 32px;
+    top: 38px;
   }
   .leftArm, .rightArm {
-    width: 12px;
-    height: 3px;
+    width: 18px;
+    height: 4px;
+    top: 55px;
   }
   .leftLeg, .rightLeg {
-    width: 3px;
-    height: 12px;
+    width: 4px;
+    height: 18px;
+    top: 80px;
   }
+  .leftArm {
+    left: calc(50% - 16px);
+    transform: rotate(25deg);
+  }
+  .rightArm {
+    left: calc(50% + 2px);
+    transform: rotate(-25deg);
+  }
+  .leftLeg { left: calc(50% - 8px); }
+  .rightLeg { left: calc(50% + 4px); }
 }
