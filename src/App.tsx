@@ -1,3 +1,4 @@
+// front
 import { useState, useEffect } from 'react';
 import { words } from './data/words';
 import type { GameState, GameStatus } from './types/game';
