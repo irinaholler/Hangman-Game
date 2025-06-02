@@ -55,7 +55,6 @@ function App() {
     });
     setStreak(0);
     setShowStreakCelebration(false);
-    setTotalGames((prev) => prev + 1);
   };
 
   const handleKeyPress = (letter: string) => {
@@ -99,6 +98,8 @@ function App() {
       status: "won",
     });
     setTotalWins((prev) => prev + 1);
+    setTotalGames((prev) => prev + 1);
+    // Check if it's a perfect win (no mistakes)
     if (gameState.remainingAttempts === MAX_ATTEMPTS) {
       setPerfectWins((prev) => prev + 1);
     }
@@ -135,7 +136,6 @@ function App() {
       <div className={styles.gameContainer}>
         <div className={styles.leftPanel}>
           <Statistics
-            streak={streak}
             totalWins={totalWins}
             totalGames={totalGames}
             perfectWins={perfectWins}
