@@ -1,4 +1,5 @@
 import styles from "./Statistics.module.css";
+import { useState } from "react";
 
 interface StatisticsProps {
   perfectWins: number;
