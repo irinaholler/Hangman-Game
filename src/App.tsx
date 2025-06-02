@@ -25,6 +25,7 @@ function App() {
   const [totalWins, setTotalWins] = useState(0);
   const [totalGames, setTotalGames] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [perfectWins, setPerfectWins] = useState(0);
 
   useEffect(() => {
     startNewGame();
@@ -98,6 +99,9 @@ function App() {
       status: "won",
     });
     setTotalWins((prev) => prev + 1);
+    if (gameState.remainingAttempts === MAX_ATTEMPTS) {
+      setPerfectWins((prev) => prev + 1);
+    }
     setStreak((prev) => {
       const newStreak = prev + 1;
       if (newStreak > bestStreak) {
@@ -134,6 +138,7 @@ function App() {
             streak={streak}
             totalWins={totalWins}
             totalGames={totalGames}
+            perfectWins={perfectWins}
           />
           {gameState.status === "playing" && (
             <div className={styles.attemptsContainer}>
